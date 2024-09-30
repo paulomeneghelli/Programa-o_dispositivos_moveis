@@ -1,0 +1,65 @@
+<!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4C4F51"
+        android:backgroundTint="#4F6B88">
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMC"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.654" />
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="282dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="20dp"
+            android:hint="ALTURA"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.735" />
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="282dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="20dp"
+            android:hint="PESO"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toTopOf="@+id/heightEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="381dp"
+            android:layout_height="288dp"
+            android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/obesidade"
+            tools:layout_editor_absoluteX="-1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
