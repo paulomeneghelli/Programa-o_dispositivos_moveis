@@ -1,9 +1,0 @@
-1.O que é um ViewGroup? Um ViewGroup é um contêiner que guarda outras Views, como botões e textos, ajudando a organizar a tela.
-
-2. O que significam match_parent e wrap_content? match_parent faz a View ocupar todo o espaço do pai. wrap_content faz a View usar só o espaço necessário para mostrar o que tem.
-
-3. O que é o LinearLayout? O LinearLayout é um ViewGroup que organiza as Views em linha, podendo ser vertical (uma em cima da outra) ou horizontal (lado a lado).
-
-4. Quais são as principais propriedades do LinearLayout? As principais propriedades são:
-layout_weight: Define quanto espaço cada View ocupa em relação às outras.
-layout_gravity: Posiciona a View dentro do espaço que ela tem, sem afetar as outras.
