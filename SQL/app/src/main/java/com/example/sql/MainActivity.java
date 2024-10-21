@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     EditText editNome, editEmail, editData;
     Button button;
     ListView listView;
+    ArrayList<Integer> ids;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         editData = findViewById(R.id.editData);
         button = findViewById(R.id.buttonCadastrar);
         listView = findViewById(R.id.listView);
+        ids = new ArrayList<>();
+
 
         //defininfo tratamnto para evento e click
         button.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 long status = database.insert("pessoas", null, cv);
                 if (status>0){
                     Toast.makeText(getApplicationContext(), "gg win", Toast.LENGTH_LONG).show();
+                    limparCampos();
+
                 } else {
                     Toast.makeText(getApplicationContext(), "se lascou", Toast.LENGTH_LONG).show();
                 }
@@ -55,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
         database = openOrCreateDatabase("meubd", MODE_PRIVATE, null);
         database.execSQL("CREATE TABLE IF NOT EXISTS pessoas (id INTEGER PRIMARY KEY AUTOINCREMENT,nome varchar, email varchar, datanasc Date)");
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int itemId = ids.get(position);
+                carregarDados(itemId);
+            }
+        });
     }
 
     public void carregarListagem(){
@@ -63,10 +77,27 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> nomes = new ArrayList<>();
         while (!cursor.isAfterLast()){
             nomes.add(cursor.getString(1));
+            ids.add(cursor.getInt(0));
+
             cursor.moveToNext();
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1, nomes);
         listView.setAdapter(adapter);
+    }
+
+    private void carregarDados(int id) {
+        Cursor cursor = database.rawQuery("SELECT * FROM pessoas WHERE id = ?", new String[]{String.valueOf(id)});
+        if (cursor.moveToFirst()) {
+            editNome.setText(cursor.getString(1)); // Nome
+            editEmail.setText(cursor.getString(2)); // Email
+        }
+        cursor.close();
+    }
+
+    private void limparCampos() {
+        editNome.setText("");
+        editEmail.setText("");
+        editData.setText("");
     }
 }
