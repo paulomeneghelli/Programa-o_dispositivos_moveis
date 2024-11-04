@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Programa-o_dispositivos_moveis.iml" filepath="$PROJECT_DIR$/.idea/Programa-o_dispositivos_moveis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQL/app/src/androidTest/androidTest.iml" filepath="$PROJECT_DIR$/SQL/app/src/androidTest/androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMC/app/src/androidTest/androidTest1.iml" filepath="$PROJECT_DIR$/IMC/app/src/androidTest/androidTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/listagem/src/androidTest/androidTest2.iml" filepath="$PROJECT_DIR$/pdm/pdm/listagem/src/androidTest/androidTest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Planetas/app/src/androidTest/androidTest3.iml" filepath="$PROJECT_DIR$/Planetas/app/src/androidTest/androidTest3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/app/src/androidTest/androidTest4.iml" filepath="$PROJECT_DIR$/pdm/pdm/app/src/androidTest/androidTest4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/listagem/src/main/main.iml" filepath="$PROJECT_DIR$/pdm/pdm/listagem/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/app/src/main/main1.iml" filepath="$PROJECT_DIR$/pdm/pdm/app/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQL/app/src/main/main2.iml" filepath="$PROJECT_DIR$/SQL/app/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMC/app/src/main/main3.iml" filepath="$PROJECT_DIR$/IMC/app/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Planetas/app/src/main/main4.iml" filepath="$PROJECT_DIR$/Planetas/app/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQL/app/src/test/test.iml" filepath="$PROJECT_DIR$/SQL/app/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/app/src/test/test1.iml" filepath="$PROJECT_DIR$/pdm/pdm/app/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMC/app/src/test/test2.iml" filepath="$PROJECT_DIR$/IMC/app/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pdm/pdm/listagem/src/test/test3.iml" filepath="$PROJECT_DIR$/pdm/pdm/listagem/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Planetas/app/src/test/test4.iml" filepath="$PROJECT_DIR$/Planetas/app/src/test/test4.iml" />
     </modules>
   </component>
 </project>
